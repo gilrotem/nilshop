@@ -43,11 +43,13 @@
 
 | Status | Task | Notes |
 |--------|------|-------|
-| ⬜ | 3.1 AdminLayout | Layout מוגן עם ניווט צדדי |
-| ⬜ | 3.2 Auth Guard | בדיקת הרשאות + הפניה ל-Login |
-| ⬜ | 3.3 Login Page | התחברות OTP |
-| ⬜ | 3.4 Dashboard | סטטיסטיקות בסיסיות |
-| ⬜ | 3.5 Navigation | תפריט צד עם כל הדפים |
+| ✅ | 3.1 AdminLayout | Layout מוגן עם ניווט צדדי |
+| ✅ | 3.2 Auth Guard | בדיקת הרשאות + הפניה ל-Login |
+| ✅ | 3.3 Login Page | התחברות OTP |
+| ✅ | 3.4 Dashboard | סטטיסטיקות בסיסיות |
+| ✅ | 3.5 Navigation | תפריט צד עם כל הדפים |
+
+**תוצר:** `src/components/admin/`, `src/pages/admin/`, `src/hooks/useAuth.ts`, `src/types/admin.ts` ✅
 
 ---
 
