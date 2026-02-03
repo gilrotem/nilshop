@@ -6,13 +6,16 @@
 
 ## 🎯 Overview
 
-**מטרה:** [TODO: הגדר מה הפרויקט עושה]
+**מטרה:** מערכת ניהול הזמנות ומעקב משלוחים לחנות בשמים NIL Perfumes
 
 **סטאק:**
 - Frontend: React + TypeScript + Tailwind
 - Backend: Supabase Edge Functions (via Lovable Cloud)
 - Database: PostgreSQL (via Lovable Cloud)
 - Hosting: Lovable
+- Payment: YaadPay (Redirect API)
+- Email: Resend
+- Notifications: Telegram Bot
 
 **GitHub:** https://github.com/gilrotem/nilshop
 
