@@ -4,19 +4,13 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+import { Select } from '@/components/ui/select';
 import { Loader2, ArrowRight, Save } from 'lucide-react';
 import type { DiscountType } from '@/types/admin';
 
@@ -140,15 +134,10 @@ export default function AdminCouponCreate() {
                 <Label>סוג הנחה *</Label>
                 <Select
                   value={form.discount_type}
-                  onValueChange={(value) => handleChange('discount_type', value)}
+                  onValueChange={(value) => handleChange('discount_type', value as DiscountType)}
                 >
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="percent">אחוזים (%)</SelectItem>
-                    <SelectItem value="fixed">סכום קבוע (₪)</SelectItem>
-                  </SelectContent>
+                  <option value="percent">אחוזים (%)</option>
+                  <option value="fixed">סכום קבוע (₪)</option>
                 </Select>
               </div>
               <div className="space-y-2">

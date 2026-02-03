@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from '@/lib/supabase';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
@@ -15,7 +15,7 @@ import {
   ArrowLeft,
   Loader2
 } from 'lucide-react';
-import type { DashboardStats, Order, ORDER_STATUS_LABELS, ORDER_STATUS_COLORS } from '@/types/admin';
+import type { DashboardStats, Order } from '@/types/admin';
 
 interface StatCardProps {
   title: string;

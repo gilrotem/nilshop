@@ -3,7 +3,7 @@
 // ============================================================
 
 import { useEffect, useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -177,7 +177,7 @@ export default function AdminSettings() {
         </CardHeader>
         <CardContent className="space-y-4">
           {/* Existing Options */}
-          {shippingOptions.map((option, index) => (
+          {shippingOptions.map((option) => (
             <div
               key={option.id}
               className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg"

@@ -28,7 +28,7 @@ const navItems: NavItem[] = [
   { label: 'הגדרות', href: '/admin/settings', icon: Settings },
 ];
 
-export function AdminNav() {
+export default function AdminNav() {
   const { user, signOut } = useAuth();
 
   const handleSignOut = async () => {

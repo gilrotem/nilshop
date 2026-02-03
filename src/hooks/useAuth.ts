@@ -3,8 +3,8 @@
 // ============================================================
 
 import { useState, useEffect, useCallback } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import type { User, Session } from '@supabase/supabase-js';
+import { supabase } from '@/lib/supabase';
+import type { Session } from '@supabase/supabase-js';
 import type { AdminUser, AppRole } from '@/types/admin';
 
 interface AuthState {

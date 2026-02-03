@@ -4,20 +4,14 @@
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+import { Select } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Loader2, Search, Eye } from 'lucide-react';
-import type { Order, OrderStatus, ORDER_STATUS_LABELS, ORDER_STATUS_COLORS } from '@/types/admin';
+import type { Order, OrderStatus } from '@/types/admin';
 
 const statusOptions: { value: OrderStatus | 'all'; label: string }[] = [
   { value: 'all', label: 'הכל' },
@@ -118,17 +112,13 @@ export default function AdminOrders() {
             <Select
               value={statusFilter}
               onValueChange={(value) => setStatusFilter(value as OrderStatus | 'all')}
+              className="w-full sm:w-48"
             >
-              <SelectTrigger className="w-full sm:w-48">
-                <SelectValue placeholder="סטטוס" />
-              </SelectTrigger>
-              <SelectContent>
-                {statusOptions.map((option) => (
-                  <SelectItem key={option.value} value={option.value}>
-                    {option.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
+              {statusOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
             </Select>
           </div>
         </CardContent>
