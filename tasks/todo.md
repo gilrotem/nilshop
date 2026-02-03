@@ -88,15 +88,33 @@
 
 | Status | Task | Notes |
 |--------|------|-------|
-| ⬜ | 6.1 Edge Function - Webhook | קבלת אישור תשלום מ-YaadPay |
-| ⬜ | 6.2 Edge Function - Telegram | שליחת התראות לבוט |
-| ⬜ | 6.3 Edge Function - Email | שליחת אישור הזמנה (Resend) |
-| ⬜ | 6.4 תבנית Email | תבנית React Email מעוצבת |
+| ✅ | 6.1 Edge Function - Webhook | קבלת אישור תשלום מ-YaadPay |
+| ✅ | 6.2 Edge Function - Telegram | שליחת התראות לבוט |
+| ✅ | 6.3 Edge Function - Email | שליחת אישור הזמנה (Resend) |
+| ✅ | 6.4 תבנית Email | תבנית React Email מעוצבת |
+
+**תוצר:** `supabase/functions/` - 3 Edge Functions + Email Template ✅
 
 ---
 
-## Completed
+## Completed ✅
 
 - [x] ~~Project setup + Git~~ - 2026-02-03
 - [x] ~~Phase 1: Database Schema~~ - 2026-02-03
 - [x] ~~Phase 2: RLS Policies~~ - 2026-02-03
+- [x] ~~Phase 3: Admin Shell~~ - 2026-02-03
+- [x] ~~Phase 4: Admin Pages~~ - 2026-02-03
+- [x] ~~Phase 5: Custom Hooks~~ - 2026-02-03
+- [x] ~~Phase 6: External Integrations~~ - 2026-02-03
+
+---
+
+## Environment Variables (Required for Deployment)
+
+```
+TELEGRAM_BOT_TOKEN=your_bot_token
+TELEGRAM_CHAT_ID=your_chat_id
+RESEND_API_KEY=your_resend_key
+FROM_EMAIL=orders@nilperfumes.com
+STORE_NAME=NIL Perfumes
+```
