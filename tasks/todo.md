@@ -73,12 +73,14 @@
 
 | Status | Task | Notes |
 |--------|------|-------|
-| ⬜ | 5.1 useOrders | שליפה, סינון, עדכון סטטוס |
-| ⬜ | 5.2 useProducts | CRUD מוצרים |
-| ⬜ | 5.3 useCoupons | CRUD קופונים + validation |
-| ⬜ | 5.4 useCustomers | שליפת לקוחות |
-| ⬜ | 5.5 useAuth | התחברות OTP + בדיקת הרשאות |
-| ⬜ | 5.6 useDashboard | סטטיסטיקות |
+| ✅ | 5.1 useOrders | שליפה, סינון, עדכון סטטוס |
+| ✅ | 5.2 useProducts | CRUD מוצרים |
+| ✅ | 5.3 useCoupons | CRUD קופונים + validation |
+| ✅ | 5.4 useCustomers | שליפת לקוחות + findOrCreate |
+| ✅ | 5.5 useAuth | התחברות OTP + בדיקת הרשאות (Phase 3) |
+| ✅ | 5.6 useDashboard | סטטיסטיקות |
+
+**תוצר:** `src/hooks/` - 6 hooks ✅
 
 ---
 
